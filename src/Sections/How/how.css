@@ -1,0 +1,31 @@
+.how .content {
+  flex-direction: column;
+}
+
+.how-frame {
+  margin-top: 40px;
+  display: flex;
+  padding: 50px;
+  text-align: center;
+  background-color: white;
+}
+
+.how-frame aside {
+  width: calc(50%-50px);
+  padding-block: 20px;
+  padding-left: 20px;
+}
+
+.how-frame aside:first-child {
+  border-right: 2px solid #b8b8b8;
+  padding-left: 0;
+  padding-right: 20px;
+}
+
+.how-el .text {
+  max-width: 400px;
+}
+
+.how-frame aside .how-el:last-child {
+  margin-top: 90px;
+}

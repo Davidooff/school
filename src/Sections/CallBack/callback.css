@@ -1,0 +1,47 @@
+.call-back .frame {
+  width: 90%;
+  display: flex;
+  background-color: white;
+  padding: 50px 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.call-back-form {
+  width: 100%;
+}
+
+.call-back-inputs .call-back_form-row {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.call-back_form-row input {
+  width: 40%;
+  font-family: "Roboto";
+  font-weight: normal;
+  padding: 20px 10px;
+  border: none;
+  border-radius: 10px;
+  font-size: 20px;
+  background: #f6f3ff;
+}
+
+.call-back button {
+  display: block;
+  background-color: var(--purple);
+  padding: 20px 150px;
+  margin: 40px auto 0 auto;
+  border: none;
+  color: white;
+}
+
+.call-back_drop-list {
+  width: calc(40% + 20px);
+  display: block;
+}
+
+.call-back_drop-list input {
+  width: calc(100% - 20px);
+}

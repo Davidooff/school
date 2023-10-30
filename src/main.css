@@ -1,0 +1,76 @@
+:root {
+  --purple: #5f51ff;
+  --text-color: #323232;
+
+  --title-size: 40px;
+  --side-title-size: 36px;
+  --sub-title-size: 32px;
+  --rich-text-size: 24px;
+  --text-size: 20px;
+}
+
+body {
+  font-family: "Roboto";
+  background-color: #f5f4f4;
+}
+
+.content {
+  padding: 25px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1024px;
+  margin: auto;
+}
+
+.title {
+  text-align: center;
+  color: var(--purple);
+  font-size: var(--title-size);
+  font-size: 40px;
+  font-weight: 900;
+}
+
+.side-title {
+  text-align: center;
+  font-weight: bold;
+  font-size: var(--side-title-size);
+  text-align: center;
+  color: var(--purple);
+  margin-bottom: 10px;
+}
+
+.sub-title {
+  text-align: center;
+  font-weight: 500;
+  color: var(--purple);
+  font-size: var(--sub-title-size);
+  text-align: center;
+}
+
+.text {
+  font-size: var(--text-size);
+  color: var(--text-color);
+  font-weight: 300;
+}
+
+.rich-text {
+  color: var(--text-color);
+  font-size: var(--rich-text-size);
+}
+
+.join-asides aside:first-child {
+  z-index: 2;
+}
+
+.join-asides aside:last-child {
+  margin-top: 46px;
+  margin-left: -30px;
+  max-width: 380px;
+  padding: 25px 25px 25px 50px;
+  background-color: white;
+}
+
+.column {
+  flex-direction: column;
+}

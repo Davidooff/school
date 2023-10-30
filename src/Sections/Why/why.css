@@ -1,0 +1,22 @@
+.why {
+  /* background-color: #7a7fff; */
+  background: linear-gradient(to bottom, #7a7fff, #7a7fff) no-repeat 0px 200px;
+}
+
+.why .content {
+  flex-direction: column;
+}
+
+.why .title {
+  margin-bottom: 40px;
+}
+
+.why img {
+  width: 90%;
+}
+
+.why p {
+  color: white;
+  text-align: center;
+  margin-top: 30px;
+}

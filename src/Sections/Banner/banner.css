@@ -1,0 +1,42 @@
+.banner {
+  background: url("/banner.webp");
+  background-size: cover;
+  background-position: right;
+  max-height: 80vh;
+  min-height: 500px;
+  width: 100vw;
+}
+
+.banner-content {
+  padding: 115px 50px 115px 50px;
+}
+
+.banner-title {
+  font-family: "Revalia";
+  font-size: 40px;
+  margin-bottom: 30px;
+  color: white;
+}
+
+.banner-text {
+  color: white;
+}
+
+.banner-btn {
+  padding: 30px 50px;
+  background-color: var(--purple);
+  color: white;
+  text-decoration: none;
+  border-radius: 50px;
+  font-size: 24px;
+  margin-top: 30px;
+  display: inline-block;
+}
+
+.banner-btn:hover {
+  color: white;
+}
+
+.banner-btn:visited {
+  text-decoration: none;
+}

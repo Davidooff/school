@@ -1,0 +1,40 @@
+.drop-list-input-cover {
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+.drop-list-input {
+  opacity: 1;
+}
+
+.drop-list {
+  position: absolute;
+  bottom: 0;
+  translate: -50% 100%;
+  left: 50%;
+  width: 100%;
+  font-size: 20px;
+  background-color: #eee9ff;
+  color: var(--text-color);
+}
+
+.drop-list li {
+  padding: 15px 0;
+  display: flex;
+  align-items: center;
+}
+
+.drop-list .circle {
+  height: 20px;
+  width: 20px;
+  background-color: white;
+  border-radius: 100%;
+  margin-inline: 20px;
+  transition: 1s;
+}
+
+.drop-list .circle.active {
+  background-color: #464086;
+}
