@@ -30,27 +30,41 @@ function Index(props: Props) {
   const [isVisible, setIsVisible] = useState(false);
 
   return (
-    <span className={props.className} style={{ position: "relative" }}>
-      <span
-        className="drop-list-input-cover"
-        onClick={() => setIsVisible(!isVisible)}
-      ></span>
-      <input
-        className="drop-list-input"
-        type="text"
-        name={props.placeholder}
-        placeholder={props.placeholder}
-        value={choiceState.read.join(", ")}
-        disabled
-      />
+    <>
       {isVisible && (
-        <DropList
-          list={props.list}
-          choosedList={choiceState.read}
-          setChoosedList={choiceState.set}
-        />
+        <div
+          className="on-close-div"
+          onClick={() => {
+            setIsVisible(false);
+          }}
+          style={{ zIndex: 99 }}
+        ></div>
       )}
-    </span>
+      <span
+        className={props.className}
+        style={{ position: "relative", zIndex: 100 }}
+      >
+        <span
+          className="drop-list-input-cover"
+          onClick={() => setIsVisible(!isVisible)}
+        ></span>
+        <input
+          className="drop-list-input"
+          type="text"
+          name={props.placeholder}
+          placeholder={props.placeholder}
+          value={choiceState.read.join(", ")}
+          disabled={choiceState.read.length ? false : true}
+        />
+        {isVisible && (
+          <DropList
+            list={props.list}
+            choosedList={choiceState.read}
+            setChoosedList={choiceState.set}
+          />
+        )}
+      </span>
+    </>
   );
 }
 
@@ -74,27 +88,29 @@ function DropList(props: DropListProps) {
   }
 
   return (
-    <ul className="drop-list">
-      {props.list.map((el) => {
-        return (
-          <li
-            key={el}
-            onClick={() => {
-              clickEvent(el);
-            }}
-          >
-            <span
-              className={
-                props.choosedList.indexOf(el) !== -1
-                  ? "circle active"
-                  : "circle"
-              }
-            ></span>
-            {el}
-          </li>
-        );
-      })}
-    </ul>
+    <>
+      <ul className="drop-list">
+        {props.list.map((el) => {
+          return (
+            <li
+              key={el}
+              onClick={() => {
+                clickEvent(el);
+              }}
+            >
+              <span
+                className={
+                  props.choosedList.indexOf(el) !== -1
+                    ? "circle active"
+                    : "circle"
+                }
+              ></span>
+              {el}
+            </li>
+          );
+        })}
+      </ul>
+    </>
   );
 }
 

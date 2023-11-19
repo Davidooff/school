@@ -5,15 +5,18 @@
 .how-frame {
   margin-top: 40px;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   padding: 50px;
   text-align: center;
   background-color: white;
 }
 
 .how-frame aside {
-  width: calc(50%-50px);
+  width: calc(50% - 50px);
   padding-block: 20px;
   padding-left: 20px;
+  min-width: 200px;
 }
 
 .how-frame aside:first-child {
@@ -24,8 +27,25 @@
 
 .how-el .text {
   max-width: 400px;
+  margin-top: 10px;
 }
 
 .how-frame aside .how-el:last-child {
   margin-top: 90px;
+}
+
+@media screen and (max-width: 633px) {
+  .how-frame aside {
+    border: none !important;
+    padding: 0 !important;
+    width: 100%;
+  }
+
+  .how-el {
+    margin-top: 30px !important;
+  }
+
+  .how-frame aside:first-child .how-el:first-child {
+    margin-top: 0 !important;
+  }
 }

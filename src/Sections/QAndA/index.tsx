@@ -25,53 +25,95 @@ function QAndA() {
 
   function reWriteAnswer(numberOfQuestion: number, answers: HTMLElement[]) {
     answers.forEach((answer: HTMLElement) => {
-      answer.id === "A" + numberOfQuestion
-        ? (answer.style.display = "block")
-        : (answer.style.display = "none");
+      if (answer.id === "A" + numberOfQuestion) {
+        answer.style.maxHeight = "500px";
+        answer.style.opacity = "1";
+      } else {
+        // answer.style.display = "none";
+        answer.style.maxHeight = "0";
+        answer.style.opacity = "0";
+      }
     });
   }
 
   return (
     <section className="qanda">
-      <div className="content join-asides">
+      <div className="content">
         <aside className="questions-side">
           <h2 className="side-title">Q&A</h2>
           <ul className="quesions-list">
-            <li id="Q1" className="question">
-              <span>Question1</span>
-              <img src={Arrow} alt="" />
-            </li>
-            <li id="Q2" className="question">
-              <span>Question1</span>
-              <img src={Arrow} alt="" />
-            </li>
-            <li id="Q3" className="question">
-              <span>Question1</span>
+            <div>
+              <li id="Q1" className="question">
+                <span>Question1</span>
+                <img src={Arrow} alt="" />
+              </li>
+              <div className="answer" id="A1">
+                <p className="rich-text">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet
+                  quasi quis, temporibus dolore ad nemo sint maiores fugit
+                  totam, et repudiandae vero! Pariatur error mollitia et odio
+                  corrupti cupiditate repellat.
+                </p>
+              </div>
+            </div>
 
-              <img src={Arrow} alt="" />
-            </li>
-            <li id="Q4" className="question">
-              <span>Question1</span>
-
-              <img src={Arrow} alt="" />
-            </li>
-            <li id="Q5" className="question">
-              <span>Question1</span>
-
-              <img src={Arrow} alt="" />
-            </li>
-            <li id="Q6" className="question">
-              <span>Question1</span>
-
-              <img src={Arrow} alt="" />
-            </li>
-            <li id="Q7" className="question">
-              Question7
-              <img src={Arrow} alt="" />
-            </li>
+            <div>
+              <li id="Q2" className="question">
+                <span>Question1</span>
+                <img src={Arrow} alt="" />
+              </li>
+              <div className="answer" id="A2">
+                <p className="rich-text">
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's
+                  standard dummy text ever since the 1500s, when an unknown
+                  printer took a galley of type and scrambled it to make a type
+                  specimen book. It has survived not only five centuries, but
+                  also the leap into electronic typesetting, remaining
+                  essentially unchanged. It was popularised in the 1960s with
+                  the release of Letraset sheets containing Lorem Ipsum
+                </p>
+              </div>
+            </div>
+            <div>
+              <li id="Q3" className="question">
+                <span>Question1</span>
+                <img src={Arrow} alt="" />
+              </li>
+              <div className="answer" id="A3">
+                <p className="rich-text">
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's
+                  standard dummy text ever since the 1500s, when an unknown
+                  printer took a galley of type and scrambled it to make a type
+                  essentially unchanged. It was popularised in the 1960s with
+                  the release of Letraset sheets containing Lorem Ipsum
+                  passages, and more recently with desktop publishing software
+                  like Aldus PageMaker including versions of Lorem Ipsum.
+                </p>
+              </div>
+            </div>
+            <div>
+              <li id="Q4" className="question">
+                <span>Question1</span>
+                <img src={Arrow} alt="" />
+              </li>
+              <div className="answer" id="A4">
+                <p className="rich-text">
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's
+                  standard dummy text ever since the 1500s, when an unknown
+                  printer took a galley of type and scrambled it to make a type
+                  specimen book. It has survived not only five centuries, but
+                  also the leap into electronic typesetting, remaining passages,
+                  and more recently with desktop publishing software like Aldus
+                  PageMaker including versions of Lorem Ipsum.
+                </p>
+              </div>
+            </div>
           </ul>
         </aside>
-        <aside className="answer-side">
+        {/* <aside className="answer-side">
           <ul>
             <li id="A1" className="answer rich-text">
               Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -136,7 +178,7 @@ function QAndA() {
               ullam hic, aperiam atque. Eum repellat odio cumque doloribus.
             </li>
           </ul>
-        </aside>
+        </aside> */}
       </div>
     </section>
   );

@@ -1,5 +1,5 @@
 .call-back .frame {
-  width: 90%;
+  width: 100%;
   display: flex;
   background-color: white;
   padding: 50px 10px;
@@ -44,4 +44,34 @@
 
 .call-back_drop-list input {
   width: calc(100% - 20px);
+}
+
+@media screen and (max-width: 520px) {
+  .call-back .title {
+    margin-bottom: 20px;
+  }
+
+  .call-back_form-row {
+    flex-direction: column;
+    margin-top: 0 !important;
+  }
+
+  .call-back_form-row input {
+    width: calc(100% - 20px);
+    margin-top: 20px;
+  }
+
+  .call-back_drop-list {
+    margin-top: 20px;
+    width: 100%;
+  }
+
+  .call-back_drop-list input {
+    margin-top: 0;
+  }
+
+  .call-back button {
+    padding: 20px 0;
+    width: 100%;
+  }
 }

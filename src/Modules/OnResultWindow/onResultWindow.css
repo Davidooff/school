@@ -1,0 +1,33 @@
+.on-result-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(86, 86, 86, 0.442);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100000;
+}
+
+.on-result-window {
+  padding: 50px;
+  background-color: white;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.on-result-window img {
+  width: 80%;
+  max-width: 300px;
+}
+
+.on-result-window h2 {
+  font-size: 36px;
+  font-weight: 900;
+}

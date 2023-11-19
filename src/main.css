@@ -23,6 +23,14 @@ body {
   margin: auto;
 }
 
+@media screen and (max-width: 800px) {
+  .content {
+    padding-block: 20px !important;
+    padding-inline: 0 !important;
+    margin: 18px;
+  }
+}
+
 .title {
   text-align: center;
   color: var(--purple);
@@ -59,16 +67,22 @@ body {
   font-size: var(--rich-text-size);
 }
 
-.join-asides aside:first-child {
-  z-index: 2;
+.join-asides .second-side {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  vertical-align: middle;
 }
 
-.join-asides aside:last-child {
-  margin-top: 46px;
-  margin-left: -30px;
-  max-width: 380px;
-  padding: 25px 25px 25px 50px;
+.join-asides .second-side p {
   background-color: white;
+  padding: 30px 30px 30px 50px;
+  margin-left: -30px;
+  margin-top: 46px;
+}
+
+.join-asides .first-side {
+  z-index: 2;
 }
 
 .column {

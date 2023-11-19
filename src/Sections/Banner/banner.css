@@ -1,10 +1,11 @@
 .banner {
   background: url("/banner.webp");
   background-size: cover;
-  background-position: right;
+  background-position-x: 50%;
   max-height: 80vh;
-  min-height: 500px;
+  min-height: 300px;
   width: 100vw;
+  margin-bottom: 30px;
 }
 
 .banner-content {
@@ -39,4 +40,10 @@
 
 .banner-btn:visited {
   text-decoration: none;
+}
+
+@media screen and (max-width: 800px) {
+  .banner-content {
+    padding: 30px 30px 80px 15px;
+  }
 }
